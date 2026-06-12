@@ -14,7 +14,7 @@ function App() {
 
             <main className="flex-1 overflow-auto p-6">
                 {/* main content area */}
-                <h1>Welcome to Dashboard</h1>
+                <h1>Welcome to Dashboard Starting the main content Area</h1>
             </main>
             </div>
         </div>
