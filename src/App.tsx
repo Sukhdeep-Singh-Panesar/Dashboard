@@ -1,5 +1,13 @@
 import Navbar from "@/components/Navbar.tsx";
 import Sidebar from "@/components/Sidebar";
+import {ChartContainer} from "@/components/ui/chart.tsx";
+import {
+    LineChart,
+    Line,
+    XAxis,
+    CartesianGrid,
+} from "recharts";
+
 function App() {
 
   return (
@@ -14,7 +22,28 @@ function App() {
 
             <main className="flex-1 overflow-auto p-6">
                 {/* main content area */}
-                <h1>Welcome to Dashboard Starting the main content Area</h1>
+                <ChartContainer
+                    config={{
+                        sales: {
+                            label: "Sales",
+                            color: "#2563eb",
+                        },
+                    }}
+                >
+                    <LineChart
+                        data={[
+                            { month: "Jan", sales: 100 },
+                            { month: "Feb", sales: 200 },
+                        ]}
+                    >
+                        <CartesianGrid />
+                        <XAxis dataKey="month" />
+                        <Line
+                            dataKey="sales"
+                            stroke="var(--color-sales)"
+                        />
+                    </LineChart>
+                </ChartContainer>
             </main>
             </div>
         </div>
