@@ -21,6 +21,7 @@ function App() {
           <Navbar/>
 
             <main className="flex-1 overflow-auto p-6">
+                Welcome to the Rajvir's Dashboard
                 {/* main content area */}
                 <ChartContainer
                     config={{
@@ -45,6 +46,7 @@ function App() {
                     </LineChart>
                 </ChartContainer>
             </main>
+
             </div>
         </div>
       </>
